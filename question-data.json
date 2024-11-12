@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "How often have you felt sad today?",
+      "answers": ["None", "Somewhat", "Frequently", "A lot"]
+    },
+    {
+      "id": 2,
+      "question": "How much physical pain have you experienced today?",
+      "answers": ["None", "Mild", "Moderate", "Severe"]
+    },
+    {
+      "id": 3,
+      "question": "How would you rate your energy levels today?",
+      "answers": ["Very low", "Low", "Moderate", "High"]
+    },
+    {
+      "id": 4,
+      "question": "How much anxiety have you felt today?",
+      "answers": ["None", "A little", "Moderate", "High"]
+    },
+    {
+      "id": 5,
+      "question": "How well have you slept over the past night?",
+      "answers": ["Very poorly", "Poorly", "Average", "Well"]
+    },
+    {
+      "id": 6,
+      "question": "How much have you been bothered by headaches today?",
+      "answers": ["Not at all", "Mildly", "Moderately", "Severely"]
+    },
+    {
+      "id": 7
+    {
+      "id": 7,
+      "question": "How often have you felt irritable today?",
+      "answers": ["Not at all", "A little", "Frequently", "Constantly"]
+    },
+    {
+      "id": 8,
+      "question": "How much difficulty have you had concentrating today?",
+      "answers": ["None", "Some", "Moderate", "Severe"]
+    },
+    {
+      "id": 9,
+      "question": "How often have you felt calm today?",
+      "answers": ["Never", "Rarely", "Often", "Constantly"]
+    },
+    {
+      "id": 10,
+      "question": "How much discomfort have you felt in your joints today?",
+      "answers": ["None", "Mild", "Moderate", "Severe"]
+    },
+    {
+      "id": 11,
+      "question": "How satisfied are you with your physical health today?",
+      "answers": ["Very dissatisfied", "Dissatisfied", "Satisfied", "Very satisfied"]
+    },
+    {
+      "id": 12,
+      "question": "How often have you felt short of breath today?",
+      "answers": ["Not at all", "Occasionally", "Frequently", "Constantly"]
+    },
+    {
+      "id": 13,
+      "question": "How much nausea have you experienced today?",
+      "answers": ["None", "Mild", "Moderate", "Severe"]
+    },
+    {
+      "id": 14,
+      "question": "How often have you felt lonely today?",
+      "answers": ["Not at all", "Sometimes", "Often", "Always"]
+    },
+    {
+      "id": 15,
+      "question": "How much difficulty have you had sleeping lately?",
+      "answers": ["None", "Some", "Moderate", "Severe"]
+    },
+    {
+      "id": 16,
+      "question": "How would you rate your appetite today?",
+      "answers": ["Very poor", "Poor", "Moderate", "Good"]
+    },
+    {
+      "id": 17,
+      "question": "How often have you felt tense today?",
+      "answers": ["Never", "Sometimes", "Often", "Always"]
+    },
+    {
+      "id": 18,
+      "question": "How much physical activity have you been able to do today?",
+      "answers": ["None", "Limited", "Moderate", "High"]
+    },
+    {
+      "id": 19,
+      "question": "How much have your thoughts felt clear and focused today?",
+      "answers": ["Not at all", "A little", "Moderate", "Very clear"]
+    },
+    {
+      "id": 20,
+      "question": "How optimistic do you feel about tomorrow?",
+      "answers": ["Not at all", "A little", "Somewhat", "Very optimistic"]
+    }
+  ]
+}
+
