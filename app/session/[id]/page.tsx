@@ -6,8 +6,6 @@ import { Database } from "@/lib/database.types";
 type Session = Database['public']['Tables']['sessions']['Row'];
 
 export default function SessionPage({ params }: { params: Promise<{ id: string }> }) {
-
-
   const { id } = use(params);
 
   const [sessionData, setSessionData] = useState<Session | null>(null);
@@ -18,8 +16,6 @@ export default function SessionPage({ params }: { params: Promise<{ id: string }
       if (id) {
         setLoading(true);
         const { data, error } = await supabase
-
-
           .from("sessions")
           .select("*")
           .eq("id", id)
@@ -48,7 +44,6 @@ export default function SessionPage({ params }: { params: Promise<{ id: string }
         <div>
           <p className="text-lg mb-2">Session ID: {sessionData.id}</p>
           <p className="text-md text-gray-700">Status: {sessionData.status}</p>
-          {/* Placeholder for additional session data or functionality */}
           <div className="mt-6 p-4 bg-white shadow rounded-lg max-w-sm">
             <p>Additional session details and functionality will go here.</p>
           </div>
