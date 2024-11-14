@@ -1,7 +1,7 @@
-'use client'
-import { use, useEffect, useState } from "react";
-import { supabase } from "../../../lib/supabaseClient";
-import { Database } from "@/lib/database.types";
+'use client';
+import { use, useEffect, useState } from 'react';
+import { supabase } from '../../../lib/supabaseClient';
+import { Database } from '@/lib/database.types';
 
 type Session = Database['public']['Tables']['sessions']['Row'];
 
@@ -16,13 +16,13 @@ export default function SessionPage({ params }: { params: Promise<{ id: string }
       if (id) {
         setLoading(true);
         const { data, error } = await supabase
-          .from("sessions")
-          .select("*")
-          .eq("id", id)
+          .from('sessions')
+          .select('*')
+          .eq('id', id)
           .single();
 
         if (error) {
-          console.error("Error fetching session data:", error);
+          console.error('Error fetching session data:', error);
         } else {
           setSessionData(data);
         }
