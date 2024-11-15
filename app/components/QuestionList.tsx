@@ -3,7 +3,7 @@ import Question from './Question';
 
 interface QuestionListProps {
   questions: Array<{ id: number; question: string; answers: string[] }>;
-  onAnswer: (questionId: number, answer: string) => void;
+  onAnswer: (answer: string) => void;
   selectedAnswers: { [key: number]: string };
 }
 
