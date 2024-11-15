@@ -18,7 +18,7 @@ const Header: FC = () => {
         </button>
       )}
       <h1 className="text-lg font-bold text-gray-800">
-        My App
+        Bruin App
       </h1>
     </header>
   );
