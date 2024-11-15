@@ -61,7 +61,7 @@ export default function Home() {
         </Button>
 
         {sessions.length > 0 && (
-          <div className="space-y-4 my-8 md:mb-0">
+          <div className="space-y-4 mt-8">
             <h2 className="text-lg font-semibold">Previous Sessions</h2>
             <ul className="space-y-2">
               {sessions.map((session) => (

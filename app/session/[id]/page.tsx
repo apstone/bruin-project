@@ -116,7 +116,7 @@ export default function SessionPage({ params }: { params: Promise<{ id: string }
   }
 
   return (
-    <div className="min-h-screen p-2 md:p-6 bg-gray-100 text-center flex flex-col items-center overflow-hidden">
+    <div className="p-2 md:p-6 bg-gray-100 text-center flex flex-col items-center overflow-hidden">
       <h1 className="text-2xl font-bold mb-4">Session</h1>
       {sessionData ? (
         <>
@@ -124,7 +124,7 @@ export default function SessionPage({ params }: { params: Promise<{ id: string }
 
           <div className="relative w-full max-w-[800px] mt-8">
             <div
-              className="space-y-8 overflow-y-auto h-[70vh] pr-4 flex flex-col-reverse"
+              className="space-y-8 overflow-y-auto h-[65vh] pr-4 flex flex-col-reverse"
               style={{ scrollbarWidth: 'none' }}
             >
               {validQuestions.map((question, index) => (
