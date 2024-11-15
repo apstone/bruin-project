@@ -6,7 +6,7 @@ interface QuestionProps {
     question: string;
     answers: string[];
   };
-  onAnswer: (questionId: number, answer: string) => void;
+  onAnswer: (answer: string) => void;
   selectedAnswer?: string;
 }
 
@@ -22,7 +22,7 @@ const Question: React.FC<QuestionProps> = ({ question, onAnswer, selectedAnswer 
               name={`question-${question.id}`}
               value={answer}
               checked={selectedAnswer === answer}
-              onChange={() => onAnswer(question.id, answer)}
+              onChange={() => onAnswer(answer)}
               className="form-radio h-4 w-4 text-blue-600 focus:ring-2 focus:ring-blue-500"
             />
             <span className="text-sm text-gray-600 font-medium">{answer}</span>

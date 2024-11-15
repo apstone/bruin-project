@@ -1,49 +1,23 @@
 'use client';
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { createSession, deleteSessionById } from '../services/sessionService';
+import { useSessions } from '../hooks/useSessions';
 import Button from './components/Button';
 import { Trash } from 'lucide-react';
 
 export default function Home() {
-  const [sessions, setSessions] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const { sessions, isLoading, startNewSession, deleteSession } = useSessions();
 
-  useEffect(() => {
-    const savedSessions = JSON.parse(localStorage.getItem('sessions') || '[]');
-    setSessions(savedSessions);
-  }, []);
-
-  const startNewSession = async () => {
-    setIsLoading(true);
+  const handleStartNewSession = async () => {
     try {
-      const data = await createSession();
-      const newSessionId = data.id;
-      const updatedSessions = [newSessionId, ...sessions];
-
-      setSessions(updatedSessions);
-      localStorage.setItem('sessions', JSON.stringify(updatedSessions));
-
+      const newSessionId = await startNewSession();
+      if (!newSessionId) {
+        console.error('Session ID is undefined');
+        return;
+      }
       router.push(`/session/${newSessionId}`);
     } catch (error) {
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const deleteSession = async (sessionId: string) => {
-    const updatedSessions = sessions.filter((session) => session !== sessionId);
-    setSessions(updatedSessions);
-    localStorage.setItem('sessions', JSON.stringify(updatedSessions));
-
-    try {
-      await deleteSessionById(sessionId);
-    } catch (error) {
-      console.error(error);
-      setSessions((prev) => [sessionId, ...prev]);
-      localStorage.setItem('sessions', JSON.stringify([sessionId, ...updatedSessions]));
+      console.error('Failed to start a new session:', error);
     }
   };
 
@@ -51,7 +25,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100 text-center">
       <main className="w-full max-w-md space-y-8">
         <Button
-          onClick={startNewSession}
+          onClick={handleStartNewSession}
           color="blue"
           variant="solid"
           fullWidth={true}
