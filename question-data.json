@@ -32,8 +32,6 @@
       "answers": ["Not at all", "Mildly", "Moderately", "Severely"]
     },
     {
-      "id": 7
-    {
       "id": 7,
       "question": "How often have you felt irritable today?",
       "answers": ["Not at all", "A little", "Frequently", "Constantly"]
